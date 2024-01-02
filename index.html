@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+    <!-- defer está configurado para indicarle a un navegador que el script debe ejecutarse después de que se haya analizado el documento, pero antes del evento DOMContentLoaded. -->
+    <!-- DOMContentLoaded es un evento que se ejecuta cuando el contenido del DOM se ha cargado, pero antes del render. Se puede manipular el DOM en este punto -->
+    <!-- defer attribute: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#defer -->
+    <!-- DOMContentLoaded event: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event -->
+    <script src="app.js" defer></script> 
+
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="app.webmanifest">
     <link rel="apple-touch-icon" href="images/icons/icon.png">
