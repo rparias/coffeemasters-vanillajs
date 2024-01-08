@@ -14,7 +14,9 @@
     <!-- DOMContentLoaded es un evento que se ejecuta cuando el contenido del DOM se ha cargado, pero antes del render. Se puede manipular el DOM en este punto -->
     <!-- defer attribute: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#defer -->
     <!-- DOMContentLoaded event: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event -->
-    <script src="app.js" defer></script> 
+    <!-- type="module" allow us to import ES6 modules, and prevent to have every value as Global, defer has no effect -->
+    <!-- type="module" docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#module -->
+    <script src="app.js" defer type="module"></script> 
 
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="app.webmanifest">

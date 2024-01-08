@@ -1,8 +1,11 @@
+import Store from "./services/Store.js";
+import { loadData } from "./services/Menu.js";
+
+// Singleton used as global store
+window.app = {};
+app.store = Store;
+
 window.addEventListener('DOMContentLoaded', () => {
-  let nav = document.querySelector('nav');
-  console.log(nav);
-  nav.innerHTML = `
-    <h2>Hello DOM</h2>
-    <p>This is HTML withing a Javascript string</p>
-  `
+  loadData();
+  console.log('store', app.store);
 })
