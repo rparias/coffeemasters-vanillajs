@@ -7,6 +7,11 @@ const Router = {
         Router.go(url);
       })
     });
+    // Event Handler for URL changes
+    window.addEventListener("popstate", (event) => {
+      Router.go(event.state.route, false);
+    })
+
     // Check and load initial URL
     Router.go(location.pathname);
   },
@@ -27,6 +32,13 @@ const Router = {
         pageElement = document.createElement("h1");
         pageElement.textContent = "Your Order";
         break;
+      default:
+        if(route.startsWith("/product-")) {
+          pageElement = document.createElement("h1");
+          pageElement.textContent = "Details";
+          const paramId = route.substring(route.lastIndexOf("-") + 1);
+          pageElement.dataset.id = paramId;
+        }
     }
     if (pageElement) {
       const cache = document.querySelector("main");
