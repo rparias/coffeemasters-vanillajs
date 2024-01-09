@@ -15,6 +15,26 @@ const Router = {
     if (addToHistory) {
       history.pushState({ route }, "", route)
     }
+
+    // render content
+    let pageElement = null;
+    switch(route) {
+      case "/":
+        pageElement = document.createElement("h1");
+        pageElement.textContent = "Menu";
+        break;
+      case "/order":
+        pageElement = document.createElement("h1");
+        pageElement.textContent = "Your Order";
+        break;
+    }
+    if (pageElement) {
+      const cache = document.querySelector("main");
+      cache.innerHTML = "";
+      cache.appendChild(pageElement);
+      window.scrollX = 0;
+      window.scrollY = 0;
+    }
   }
 }
 
