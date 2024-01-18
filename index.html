@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+    <link rel="preload" href="components/MenuPage.css" as="stylesheet">
+
     <!-- defer está configurado para indicarle a un navegador que el script debe ejecutarse después de que se haya analizado el documento, pero antes del evento DOMContentLoaded. -->
     <!-- DOMContentLoaded es un evento que se ejecuta cuando el contenido del DOM se ha cargado, pero antes del render. Se puede manipular el DOM en este punto -->
     <!-- defer attribute: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#defer -->
@@ -42,6 +44,7 @@
     </main>
 
     <template id="menu-page-template">
+        <h2>This is the menu</h2>
         <section>
             <ul id="menu"></ul>
         </section>
